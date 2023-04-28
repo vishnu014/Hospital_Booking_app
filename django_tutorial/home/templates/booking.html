@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+Booking
+{% endblock %}
+{% block content %}
+<h1 class="text-center">Make An Appoinment</h1>
+<hr>
+<div class="col-4 text-center bg-info " style=" margin: 40px auto; border: 1px solid black; padding: 50px 20px; border-radius: 10px;" >
+    
+    {% comment %} <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <hr>
+        <button class="btn btn-primary mb-4" type="submit" >Submit</button>
+        
+    </form> {% endcomment %}
+    <form method="post" class="form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
